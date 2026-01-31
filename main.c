@@ -6,18 +6,18 @@ void iniciar_mapa(char mapa[LINHAS][COLUNAS]){
     int i , j ; 
     for( i = 0 ; i<LINHAS ;i++){
         for(j = 0 ; j <COLUNAS ; j++){
-            if(i == 0 || i == LINHAS -1 ){
-                mapa[i][j] = '-';
-                }
-            else if(j ==0 || j == COLUNAS -1 ){
-                mapa[i][j] = '|';
-                }
-            else{
-                mapa[i][j] ='*';
-            }
+             mapa[i][j] = '*'; 
+          if(1<2){
+                mapa[i][0] = '|';
+                 // PISO
+                 if(mapa[i][j]=='*'){
+                     mapa[i][j] ='_' ;
+                 }
+                 mapa[i][COLUNAS-1] = '|';
             }
         }
     }
+}
 void desenhar_mapa(char mapa[LINHAS][COLUNAS]){
     int i , j ; 
     for( i = 0 ; i<LINHAS ;i++){
